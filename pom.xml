@@ -4,29 +4,27 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>mindcircuit13</artifactId>
+    <artifactId>hello-world</artifactId>
     <version>3.7</version>
     <packaging>war</packaging>
 
-	<properties>
-		<docker.image.prefix>kammana</docker.image.prefix>
-		<sonar.host.url>http://54.160.137.141:9000/</sonar.host.url>
+    <properties>
+        <docker.image.prefix>kammana</docker.image.prefix>
+        <sonar.host.url>http://54.160.137.141:9000/</sonar.host.url>
+    </properties>
 
-	</properties>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>NexusRepo</id>
+            <url>http://34.207.116.44:8081/repository/batch13-repository-snapshots/</url>
+        </snapshotRepository>
+        
+        <repository>
+            <id>NexusRepo</id>
+            <url>http://34.207.116.44:8081/repository/batch13-repository/</url>
+        </repository>
+    </distributionManagement>
 
-	<distributionManagement>
-		 <snapshotRepository>
-		    <id>NexusRepo</id>
-		    <url>http://34.207.116.44:8081/repository/batch13-repository-snapshots/</url>
-		 </snapshotRepository>
-		
-		<repository>
-		    <id>NexusRepo</id>
-		    <url>http://34.207.116.44:8081/repository/batch13-repository/</url>
-		</repository>
-  	</distributionManagement>
-
-    
     <build>
         <plugins>
             <plugin>
